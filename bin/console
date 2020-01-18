@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
-require "ancient_battle_codex"
+# require "bundler/setup"
+# require "ancient_battle_codex"
+
+require './lib/environment.rb'
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -12,3 +14,5 @@ require "ancient_battle_codex"
 
 require "irb"
 IRB.start(__FILE__)
+
+#what it used to look like IRB.start(__FILE__)

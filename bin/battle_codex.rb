@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby 
 
+# require "bundler/setup"
 require './lib/environment.rb'
 #anything that needs my environment can just load it through this one line call above 
+
+# require "ancient_battle_codex"
 
 
 AncientBattleCodex::CLI.new.call 
