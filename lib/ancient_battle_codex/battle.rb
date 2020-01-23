@@ -1,5 +1,15 @@
 class AncientBattleCodex::Battle 
-    attr_accessor :name, :time, :parties, :leaders, :victory, :location, :strength, :summary, :url 
+    attr_accessor :name, :parties, :leaders, :victory, :location, :strength, :summary, :url 
+
+    @@all = []
+
+    def initialize 
+        @@all << self 
+    end 
+
+    def self.all
+        @@all
+    end 
 
 
     def self.display #display calls scrape_battles as long as its returning an array of battle objects 
@@ -8,7 +18,7 @@ class AncientBattleCodex::Battle
     end 
 
     def self.scrape_battles
-        battles = [] #everytime i scrape a deal, it should push into this empty array, and that will be the return #value of this method 
+        battles = [] #everytime i scrape a battle, it should push into this empty array, and that will be the return #value of this method 
 
         battles << self.scrape_article 
         #go to site find the battle 
@@ -20,12 +30,25 @@ class AncientBattleCodex::Battle
     end 
 
     def self.scrape_article 
-        doc = Nokogiri::HTML(open("https://www.ancienthistorylists.com/ancient-civilizations/top-14-decisive-ancient-battles-history/"))
+        html = Nokogiri::HTML(open("https://www.ancienthistorylists.com/ancient-civilizations/top-14-decisive-ancient-battles-history/"))
+        doc = html.css(".entry-content").children
+        binding.pry
+        doc.each do |section|
 
-        battle = self.new 
-        # here put,    "name = doc.search("").text"  ----------------- then each with its individual attribute and html in the parentheses 
+        end 
 
-        battle #this goes after parsing through the xml elements and applying its return value to the attributes, this shoves it into the battles array in the scrape_battles class method above.. 
+        
+        
+        # meh = doc.css("h2").children
+        # meh.each do |title| 
+        #     b = AncientBattleCodex::Battle.new 
+        #     b.name = title.text 
+        # binding.pry 
+        # end 
+
+        # here put,    "name = html.search("").text"  ----------------- then each with its individual attribute and html in the parentheses 
+
+        #battle #this goes after parsing through the xml elements and applying its return value to the attributes, this shoves it into the battles array in the scrape_battles class method above.. 
 
     end 
 end 

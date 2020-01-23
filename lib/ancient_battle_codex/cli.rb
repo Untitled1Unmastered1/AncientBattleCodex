@@ -10,11 +10,11 @@ class AncientBattleCodex::CLI
     def list_battles #this instance method depends on the display class method of AncientBattleCodex, in order
         #to return instances of battles --- once this works everything else will work. 
         puts "Hist'rians! these art the top 14 most decisive ancient battles in hist'ry in descending 'rd'r!"
-        @battles = AncientBattleCodex::Battle.display #if you return to me battle objects/data from the site 
+        AncientBattleCodex::Battle.display #if you return to me battle objects/data from the site 
         #EVERYTHING else will work :) 
-        @battles.each.with_index(1) do |battle, i|
-            puts "#{i}.  #{battle.name} | #{battle.time} | #{battle.parties}"
-        end 
+        #@battles.each.with_index(1) do |battle, i|
+            #puts "#{i}.  #{battle.name} | #{battle.time} | #{battle.parties}"
+        #end 
     end 
 
     def codex 
