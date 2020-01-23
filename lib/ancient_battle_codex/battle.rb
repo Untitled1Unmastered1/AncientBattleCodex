@@ -2,17 +2,21 @@ class AncientBattleCodex::Battle
     attr_accessor :name, :time, :parties, :leaders, :victory, :location, :strength, :summary, :url 
 
 
-    def self.display 
+    def self.display #display calls scrape_battles as long as its returning an array of battle objects 
         #scrape data from site and then return battles based on that data 
         self.scrape_battles 
     end 
 
     def self.scrape_battles
+        battles = [] #everytime i scrape a deal, it should push into this empty array, and that will be the return #value of this method 
+
+
         #go to site find the battle 
         #extract the details of each battle 
         #instantiate a battle object 
 
-        [battle_14, battle_13]
+        #go to site 
+        [battles]
     end 
 end 
 
