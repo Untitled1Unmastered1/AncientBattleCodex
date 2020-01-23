@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
-# require "bundler/setup"
-# require "ancient_battle_codex"
+#this console is strictly to debug with irb
 
 require './lib/environment.rb'
 
@@ -13,6 +12,6 @@ require './lib/environment.rb'
 # Pry.start
 
 require "irb"
-IRB.start(__FILE__)
+IRB.start
 
 #what it used to look like IRB.start(__FILE__)
