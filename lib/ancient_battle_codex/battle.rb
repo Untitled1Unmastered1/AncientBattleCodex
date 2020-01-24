@@ -31,25 +31,17 @@ class AncientBattleCodex::Battle
 
     def self.scrape_article 
         html = Nokogiri::HTML(open("https://www.ancienthistorylists.com/ancient-civilizations/top-14-decisive-ancient-battles-history/"))
-        INSTANCES[0].name = html.css("#post-393 > div > div > h2:nth-child(2)").text
-        array = html.css("#post-393 > div > div > p:nth-child(4)").to_a
-        doc = array[0].children.to_a
-        INSTANCES[0].parties = doc[1].text
-
-        # INSTANCES[0].parties = html.css("#post-393 > div > div > p:nth-child(4) > strong:nth-child(1)").text
-        binding.pry         
-
-        
-        # meh = doc.css("h2").children
-        # meh.each do |title| 
-        #     b = AncientBattleCodex::Battle.new 
-        #     b.name = title.text 
-        # binding.pry 
-        # end 
-
-        # here put,    "name = html.search("").text"  ----------------- then each with its individual attribute and html in the parentheses 
-
-        #battle #this goes after parsing through the xml elements and applying its return value to the attributes, this shoves it into the battles array in the scrape_battles class method above.. 
+        INSTANCES[13].name = html.css("#post-393 > div > div > h2:nth-child(2)").text
+        array_1 = html.css("#post-393 > div > div > p:nth-child(4)").to_a
+        doc_1 = array_1[0].children.to_a
+        INSTANCES[13].parties = doc_1[1].text
+        array_2 = html.css("#post-393 > div > div > p:nth-child(4)").to_a
+        INSTANCES[13].victory = array_2[0].children[17].text 
+        array_3 = html.css("#post-393 > div > div > p:nth-child(4)").to_a
+        INSTANCES[13].location = array_3[0].children[21].text
+        array_4 = html.css("#post-393 > div > div > p:nth-child(5)").to_a
+        INSTANCES[13].summary = array_4[0].text 
+        #"battle" #this goes after parsing through the xml elements and applying its return value to the attributes, this shoves it into the battles array in the scrape_battles class method above.. 
 
     end 
 end 

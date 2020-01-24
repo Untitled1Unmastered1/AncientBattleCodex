@@ -14,7 +14,6 @@ class AncientBattleCodex::CLI
         #EVERYTHING else will work :) 
         #@battles.each.with_index(1) do |battle, i|
             #puts "#{i}.  #{battle.name} | #{battle.time} | #{battle.parties}"
-        #end 
     end 
 
     def codex 
@@ -23,9 +22,9 @@ class AncientBattleCodex::CLI
             puts "[CODEX] Selecteth a battle 'r typeth list to see full listeth again. Typeth exit to did quit!"
             input = gets.strip.downcase
             
-            if input.to_i > 0 #converts strings to integers.. here user will input # maybe use 1-14
-                the_battle = @battles[input.to_i-1] 
-                puts "#{the_battle.name} | #{the_battle.time} | #{the_battle.parties}"
+            if input.to_i > 0 #converts strings to integers.. here user will input # maybe use 1-14 
+                the_battle = INSTANCES[input.to_i-1]
+                puts "#{the_battle.name} | #{the_battle.parties} | #{the_battle.victory}"
             elsif input == "list"
                 list_battles
             else
@@ -33,6 +32,12 @@ class AncientBattleCodex::CLI
             end 
         end 
     end 
+
+    def bye
+        puts "Thanketh thee f'r coming hist'rian!!"
+    end  
+end 
+
 #         case input 
 #         when "14"
 #             puts "M're info on battleth 14.."
@@ -69,8 +74,3 @@ class AncientBattleCodex::CLI
 #         end 
 #     end 
 # end 
-
-    def bye
-        puts "Thanketh thee f'r coming hist'rian!!"
-    end  
-end 
