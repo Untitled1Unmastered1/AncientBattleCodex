@@ -4,11 +4,11 @@ class AncientBattleCodex::Battle
     @@all = []
 
     def initialize 
-        @@all << self 
+        @@all << self
     end 
 
     def self.all
-        @@all
+        @@all 
     end 
 
 
@@ -18,15 +18,11 @@ class AncientBattleCodex::Battle
     end 
 
     def self.scrape_battles
-        battles = [] #everytime i scrape a battle, it should push into this empty array, and that will be the return #value of this method 
-
-        battles << self.scrape_article 
-        #go to site find the battle 
-        #extract the details of each battle 
-        #instantiate a battle object 
-
-        #go to site 
-        battles 
+        @battles = [] #everytime i scrape a battle, it should push into this empty array, and that will be the return #value of this method 
+        @battles << self.scrape_article  
+    #     #go to site find the battle 
+    #     #extract the details of each battle 
+    #     #instantiate a battle object 
     end 
 
     def self.scrape_article 
@@ -122,53 +118,6 @@ class AncientBattleCodex::Battle
         INSTANCES[0].parties = array_19[1].text 
         INSTANCES[0].victory = array_19[17].text 
         INSTANCES[0].location = array_19[21].text 
-        
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-
-
-
-
-
-    
-
-    
-
-        
-
-
-
-    
-
-
-        
-
-        
-
-        
-
-
-    
-        binding.pry 
-
-        
-
-        # binding.pry 
-        #"battle" #this goes after parsing through the xml elements and applying its return value to the attributes, this shoves it into the battles array in the scrape_battles class method above.. 
-
+        INSTANCES[0].summary = html.css("#post-393 > div > div > p:nth-child(58)").text
     end 
 end 

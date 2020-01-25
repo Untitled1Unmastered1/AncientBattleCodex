@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby 
 
-# require "bundler/setup"
+
+
 require './lib/environment.rb'
 #copying the pattern that the console came with.. 
 #anything that needs my environment can just load it through this one line call above 
