@@ -35,12 +35,35 @@ class AncientBattleCodex::Battle
         array_1 = html.css("#post-393 > div > div > p:nth-child(4)").to_a
         doc_1 = array_1[0].children.to_a
         INSTANCES[13].parties = doc_1[1].text
-        array_2 = html.css("#post-393 > div > div > p:nth-child(4)").to_a
-        INSTANCES[13].victory = array_2[0].children[17].text 
-        array_3 = html.css("#post-393 > div > div > p:nth-child(4)").to_a
-        INSTANCES[13].location = array_3[0].children[21].text
-        array_4 = html.css("#post-393 > div > div > p:nth-child(5)").to_a
-        INSTANCES[13].summary = array_4[0].text 
+        INSTANCES[13].victory = array_1[0].children[17].text 
+        INSTANCES[13].location = array_1[0].children[21].text
+        array_2 = html.css("#post-393 > div > div > p:nth-child(5)").to_a << html.css("#post-393 > div > div > p:nth-child(6)").text
+        INSTANCES[13].summary = array_2[0].text << array_2[1]
+        INSTANCES[12].name = html.css("#post-393 > div > div > h2:nth-child(7)").text
+        array_3 = html.css("#post-393 > div > div > p:nth-child(9)").to_a
+        doc_2 = array_3[0].children.to_a
+        INSTANCES[12].parties = doc_2[1].text 
+        doc_3 = array_3[0].children.to_a 
+        INSTANCES[12].victory = doc_3[17].text 
+        INSTANCES[12].location = array_3[0].children[21].text 
+        array_4 = html.css("#post-393 > div > div > p:nth-child(10)").to_a
+        INSTANCES[12].summary = array_4[0].text 
+        INSTANCES[11].name = html.css("#post-393 > div > div > h2:nth-child(11)").text
+        array_5 = html.css("#post-393 > div > div > p:nth-child(13)").children.to_a
+        INSTANCES[11].parties = array_5[1].text 
+        INSTANCES[11].victory = array_5[17].text 
+        INSTANCES[11].location = array_5[21].text 
+        array_6 = html.css("#post-393 > div > div > p:nth-child(14)").to_a << html.css("#post-393 > div > div > p:nth-child(15)").text 
+        INSTANCES[11].summary = array_6[0].text << array_6[1] 
+        INSTANCES[10]
+
+
+    
+        binding.pry 
+
+        
+
+        # binding.pry 
         #"battle" #this goes after parsing through the xml elements and applying its return value to the attributes, this shoves it into the battles array in the scrape_battles class method above.. 
 
     end 

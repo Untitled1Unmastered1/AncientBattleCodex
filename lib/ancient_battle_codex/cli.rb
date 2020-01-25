@@ -10,6 +10,7 @@ class AncientBattleCodex::CLI
     def list_battles #this instance method depends on the display class method of AncientBattleCodex, in order
         #to return instances of battles --- once this works everything else will work. 
         puts "Hist'rians! these art the top 14 most decisive ancient battles in hist'ry in descending 'rd'r!"
+        puts 
         AncientBattleCodex::Battle.display #if you return to me battle objects/data from the site 
         #EVERYTHING else will work :) 
         #@battles.each.with_index(1) do |battle, i|
@@ -24,7 +25,7 @@ class AncientBattleCodex::CLI
             
             if input.to_i > 0 #converts strings to integers.. here user will input # maybe use 1-14 
                 the_battle = INSTANCES[input.to_i-1]
-                puts "#{the_battle.name} | #{the_battle.parties} | #{the_battle.victory}"
+                puts "#{the_battle.name} |" "BATTLE BETWEEN:#{the_battle.parties} |" " LOCATION:#{the_battle.location}"
             elsif input == "list"
                 list_battles
             else
