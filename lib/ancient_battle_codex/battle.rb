@@ -88,7 +88,10 @@ class AncientBattleCodex::Battle
         INSTANCES[6].summary = array_12[0].text << array_12[1]
         INSTANCES[5].name = html.css("#post-393 > div > div > h2:nth-child(37)").text 
         array_13 = html.css("#post-393 > div > div > p:nth-child(38)").children.to_a
+        INSTANCES[5].parties = array_13[1].text 
         INSTANCES[5].victory = array_13[17].text 
+        INSTANCES[5].location = array_13[21].text 
+        INSTANCES[5].summary 
     
 
     
