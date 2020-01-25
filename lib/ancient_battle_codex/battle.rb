@@ -86,7 +86,7 @@ class AncientBattleCodex::Battle
         INSTANCES[6].location = array_11[21].text 
         array_12 = html.css("#post-393 > div > div > p:nth-child(35)").to_a << html.css("#post-393 > div > div > p:nth-child(36)").text 
         INSTANCES[6].summary = array_12[0].text << array_12[1]
-        INSTANCES[5].name 
+        INSTANCES[5].name = html.css("#post-393 > div > div > h2:nth-child(37)").text 
     
 
         
