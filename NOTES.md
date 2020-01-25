@@ -1,14 +1,3 @@
-1. Plan gem, imagine its interface. 
-2. Start with the project structure- google. 
-3. Start with the entry point- the file run.
-4. Force that to build the CLI interface. 
-5. Stub out the interface. 
-6. Start making things real. 
-7. Discover objects- binding.pry 
-8. Program
-
-
-Remember anytime you create a file add it to your environment!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 A Command Line Interface for choosing specific details of some of the greatest ancient battles of all time. 
 
@@ -29,17 +18,7 @@ EXAMPLE:
 3.  Battle of Salamis      | 480 BC  | Roman Republic VS Parthian Empire 
 2.  Battle of Carrhae      | 53 BC   | Roman Republic VS Parthian Empire 
 1.  Battle of Gaixia       | 202 BC  | Han VS Western Chu 
-
-USER can decide which number on list to choose, when he chooses number he will be taken to a screen showing the following:
-Battle Between:
-Party1 Leader(s):
-Party2 Leader(s):
-DATE:
-Victory:
-Location:
-Party1 Army size:
-Party2 Army size: 
-Summary/Description : 
+USER can decide which number on list to choose, when he chooses number he will be taken to a screen showing the 
 
 Bottom Will state 
 | CODEX | 
@@ -52,13 +31,10 @@ it has a name
 it has these categories:
 
 Battle Between:
-Party1 Leader(s):
-Party2 Leader(s):
-DATE:
+NAME/DATE:
+PARTIES(INVOLVED):
 Victory:
 Location:
-Party1 Army size:
-Party2 Army size: 
 Summary/Description : 
 
 

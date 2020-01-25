@@ -1,4 +1,3 @@
-#Our CLI Controller- responsible for user interactions 
 class AncientBattleCodex::CLI 
     
     def call #procedural method defining all of the things i want to do 
