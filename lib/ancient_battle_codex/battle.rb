@@ -108,6 +108,8 @@ class AncientBattleCodex::Battle
         array_16 = html.css("#post-393 > div > div > p:nth-child(49)").children.to_a 
         INSTANCES[2].parties = array_16[1].text 
         INSTANCES[2].victory = array_16[17].text 
+        INSTANCES[2].location = array_16[21].text 
+        
 
 
 
