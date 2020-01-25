@@ -101,6 +101,7 @@ class AncientBattleCodex::Battle
         INSTANCES[3].name = html.css("#post-393 > div > div > h2:nth-child(44)").text 
         array_15 = html.css("#post-393 > div > div > p:nth-child(46)").children.to_a
         INSTANCES[3].parties = array_15[1].text 
+        INSTANCES[3].victory = array_15[17].text 
         
 
 
