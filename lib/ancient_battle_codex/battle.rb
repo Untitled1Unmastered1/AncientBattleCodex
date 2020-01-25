@@ -91,7 +91,7 @@ class AncientBattleCodex::Battle
         INSTANCES[5].parties = array_13[1].text 
         INSTANCES[5].victory = array_13[17].text 
         INSTANCES[5].location = array_13[21].text 
-        INSTANCES[5].summary 
+        INSTANCES[5].summary = html.css("#post-393 > div > div > p:nth-child(39)").text 
     
 
     
