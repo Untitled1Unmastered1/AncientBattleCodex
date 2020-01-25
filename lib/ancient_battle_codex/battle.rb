@@ -73,7 +73,21 @@ class AncientBattleCodex::Battle
         INSTANCES[8].victory = array_9[17].text 
         INSTANCES[8].location = array_9[21].text 
         INSTANCES[8].summary = html.css("#post-393 > div > div > p:nth-child(28)").text 
-        INSTANCES[7]
+        INSTANCES[7].name = html.css("#post-393 > div > div > h2:nth-child(29)").text 
+        array_10 = html.css("#post-393 > div > div > p:nth-child(31)").children.to_a
+        INSTANCES[7].parties = array_10[1].text 
+        INSTANCES[7].victory = array_10[17].text 
+        INSTANCES[7].location = array_10[21].text
+        INSTANCES[7].summary = html.css("#post-393 > div > div > p:nth-child(32)").text 
+        INSTANCES[6].name = html.css("#post-393 > div > div > h2:nth-child(33)").text 
+        array_11 = html.css("#post-393 > div > div > p:nth-child(34)").children.to_a
+        INSTANCES[6].parties = array_11[1].text 
+        INSTANCES[6].victory = array_11[17].text 
+        INSTANCES[6].location = array_11[21].text 
+        array_12 = html.css("#post-393 > div > div > p:nth-child(35)").to_a << html.css("#post-393 > div > div > p:nth-child(36)").text 
+        INSTANCES[6].summary = array_12[0].text << array_12[1]
+        INSTANCES[5].name 
+    
 
         
 
