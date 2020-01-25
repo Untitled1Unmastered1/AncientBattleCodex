@@ -55,7 +55,38 @@ class AncientBattleCodex::Battle
         INSTANCES[11].location = array_5[21].text 
         array_6 = html.css("#post-393 > div > div > p:nth-child(14)").to_a << html.css("#post-393 > div > div > p:nth-child(15)").text 
         INSTANCES[11].summary = array_6[0].text << array_6[1] 
-        INSTANCES[10]
+        INSTANCES[10].name = html.css("#post-393 > div > div > h2:nth-child(17)").text 
+        array_7 = html.css("#post-393 > div > div > p:nth-child(19)").children.to_a
+        INSTANCES[10].parties = array_7[1].text 
+        INSTANCES[10].victory = array_7[17].text 
+        INSTANCES[10].location = array_7[21].text 
+        INSTANCES[10].summary = html.css("#post-393 > div > div > p:nth-child(20)").text 
+        INSTANCES[9].name = html.css("#post-393 > div > div > h2:nth-child(21)").text 
+        array_8 = html.css("#post-393 > div > div > p:nth-child(23)").children.to_a 
+        INSTANCES[9].parties = array_8[1].text 
+        INSTANCES[9].victory = array_8[17].text 
+        INSTANCES[9].location = array_8[21].text 
+        INSTANCES[9].summary = html.css("#post-393 > div > div > p:nth-child(24)").text 
+        INSTANCES[8].name = html.css("#post-393 > div > div > h2:nth-child(25)").text 
+        array_9 = html.css("#post-393 > div > div > p:nth-child(27)").children.to_a 
+        INSTANCES[8].parties = array_9[1].text 
+        INSTANCES[8].victory = array_9[17].text 
+        INSTANCES[8].location = array_9[21].text 
+        INSTANCES[8].summary = html.css("#post-393 > div > div > p:nth-child(28)").text 
+        INSTANCES[7]
+
+        
+
+
+
+    
+
+
+        
+
+        
+
+        
 
 
     
