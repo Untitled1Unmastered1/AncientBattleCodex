@@ -121,7 +121,9 @@ class AncientBattleCodex::Battle
         array_19 = html.css("#post-393 > div > div > p:nth-child(57)").children.to_a
         INSTANCES[0].parties = array_19[1].text 
         INSTANCES[0].victory = array_19[17].text 
+        INSTANCES[0].location = array_19[21].text 
         
+
 
 
 
