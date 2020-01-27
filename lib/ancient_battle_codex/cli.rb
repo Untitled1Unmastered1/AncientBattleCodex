@@ -17,6 +17,14 @@ class AncientBattleCodex::CLI
         end 
     end 
 
+    def valid?(input)
+        if (1..14).any? {|num| num == input.to_i}
+            true
+        else
+            false
+        end
+    end
+
     def codex 
         input = nil 
         while input != "exit"
@@ -25,11 +33,11 @@ class AncientBattleCodex::CLI
             Selecteth a battle 'r typeth list to see list again or refresh page. Typeth exit to did quit!"
             input = gets.strip.downcase #this stops it from being an endless loop 
             
-            if input.to_i > 0  
+            # if input.to_i > 0  
+            if valid?(input)
                 details = INSTANCES[input.to_i-1]
                 puts "VICTORY BELONGS TO:#{details.victory} ---------------------------------------------
                 #{details.summary}"                
-
             elsif input == "list"
                 list_battles
             elsif input == "exit"

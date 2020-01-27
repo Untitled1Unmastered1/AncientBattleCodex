@@ -11,7 +11,6 @@ class AncientBattleCodex::Battle
         @@all 
     end 
 
-
     def self.display #display calls scrape_battles as long as its returning an array of battle objects 
         #scrape data from site and then return battles based on that data 
         self.scrape_battles 
