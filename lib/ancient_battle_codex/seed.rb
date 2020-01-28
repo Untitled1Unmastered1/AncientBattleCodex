@@ -15,7 +15,6 @@ red_cliffs = AncientBattleCodex::Battle.new,
 thermopylae = AncientBattleCodex::Battle.new,
 plataea = AncientBattleCodex::Battle.new]
 
-#file for dummy data.. had to hardcode this unfortunately, due to the nature of the html structure on the website. 
 
 
 

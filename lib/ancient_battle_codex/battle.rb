@@ -10,20 +10,7 @@ class AncientBattleCodex::Battle
     def self.all
         @@all 
     end 
-
-    def self.display #display calls scrape_battles as long as its returning an array of battle objects 
-        #scrape data from site and then return battles based on that data 
-        self.scrape_battles 
-    end 
-
-    def self.scrape_battles
-        @battles = [] #everytime i scrape a battle, it should push into this empty array, and that will be the return #value of this method 
-        @battles << self.scrape_article  
-    #     #go to site find the battle 
-    #     #extract the details of each battle 
-    #     #instantiate a battle object 
-    end 
-
+ 
     def self.scrape_article 
         html = Nokogiri::HTML(open("https://www.ancienthistorylists.com/ancient-civilizations/top-14-decisive-ancient-battles-history/"))
         INSTANCES[13].name = html.css("#post-393 > div > div > h2:nth-child(2)").text

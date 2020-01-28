@@ -2,6 +2,7 @@ class AncientBattleCodex::CLI
     
     def call #procedural method defining all of the things i want to do 
         list_battles
+        # binding.pry 
         codex
     end 
 
@@ -10,7 +11,7 @@ class AncientBattleCodex::CLI
         puts "\n------------------------------------"
         puts puts "Hist'rians! These art the top 14 most decisive ancient battles in hist'ry!"
         puts "------------------------------------"
-        AncientBattleCodex::Battle.display #if you return to me battle objects/data from the site EVERYTHING else will work :) 
+        AncientBattleCodex::Battle.scrape_article #if you return to me battle objects/data from the site EVERYTHING else will work :) 
         # binding.pry 
         INSTANCES.each do |battle|
             puts "#{battle.name} |" "BATTLE BETWEEN:#{battle.parties} |" "LOCATION:#{battle.location}"
@@ -32,8 +33,7 @@ class AncientBattleCodex::CLI
             puts "[CODEX] 
             Selecteth a battle 'r typeth list to see list again or refresh page. Typeth exit to did quit!"
             input = gets.strip.downcase #this stops it from being an endless loop 
-            
-            # if input.to_i > 0  
+             
             if valid?(input)
                 details = INSTANCES[input.to_i-1]
                 puts "VICTORY BELONGS TO:#{details.victory} ---------------------------------------------
