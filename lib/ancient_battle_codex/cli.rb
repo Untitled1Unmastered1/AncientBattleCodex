@@ -1,18 +1,15 @@
 class AncientBattleCodex::CLI 
     
-    def call #procedural method defining all of the things i want to do 
+    def call 
         list_battles
-        # binding.pry 
         codex
     end 
 
-    def list_battles #this instance method depends on the display class method of AncientBattleCodex, in order
-        #to return instances of battles --- once this works everything else will work. 
+    def list_battles 
         puts "\n------------------------------------"
-        puts puts "Hist'rians! These art the top 14 most decisive ancient battles in hist'ry!"
+        puts "Hist'rians! These art the top 14 most decisive ancient battles in hist'ry!"
         puts "------------------------------------"
-        AncientBattleCodex::Battle.scrape_article #if you return to me battle objects/data from the site EVERYTHING else will work :) 
-        # binding.pry 
+        AncientBattleCodex::Battle.scrape_article 
         INSTANCES.each do |battle|
             puts "#{battle.name} |" "BATTLE BETWEEN:#{battle.parties} |" "LOCATION:#{battle.location}"
         end 
@@ -30,9 +27,9 @@ class AncientBattleCodex::CLI
         input = nil 
         while input != "exit"
             puts "\n------------------------------------"
-            puts "[CODEX] 
-            Selecteth a battle 'r typeth list to see list again or refresh page. Typeth exit to did quit!"
-            input = gets.strip.downcase #this stops it from being an endless loop 
+            puts "[CODEX]   Selecteth a battle 'r typeth list to see list again or refresh page. Typeth exit to did quit!"
+            puts "\n------------------------------------"
+            input = gets.strip.downcase 
              
             if valid?(input)
                 details = INSTANCES[input.to_i-1]
