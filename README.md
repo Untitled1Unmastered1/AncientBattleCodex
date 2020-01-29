@@ -1,44 +1,78 @@
 # AncientBattleCodex
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ancient_battle_codex`. To experiment with that code, run `bin/console` for an interactive prompt.
+This interactive CLI lists the top 14 most decisive battles in Ancient History, in shakespearean dialogue.  You can choose a battle to learn more information about it. The executable file is: ./bin/battle_codex.rb This loads the environment file, which then loads all other files in order of importance. To get started, run: 
 
-TODO: Delete this and the text above, and describe your gem
+./bin/battle_codex.rb
 
-## Installation
 
-Add this line to your application's Gemfile:
 
-```ruby
-gem 'ancient_battle_codex'
-```
+## Getting Started 
 
-And then execute:
+In your terminal paste the following:
 
-    $ bundle install
+git clone https://github.com/Untitled1Unmastered1/AncientBattleCodex.git
 
-Or install it yourself as:
+Once this loads the directory, type the following: 
 
-    $ gem install ancient_battle_codex
+cd Ancient_Battle_Codex 
 
-## Usage
+Then to load the interactive list, go ahead and run the executable file:
 
-TODO: Write usage instructions here
+./bin/battle_codex.rb
 
-## Development
+Enjoyeth this hist'ry lesson!
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Prerequisites
+
+What things you need to install the software and how to install them:
+
+Ruby 2.6.1 
+
+
+## Built With
+
+Ruby 2.6.1 
+VS Code 
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ancient_battle_codex. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/ancient_battle_codex/blob/master/CODE_OF_CONDUCT.md).
+Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning 
+
+We use [SemVer] for versioning. For the versions available, see the tags on this repository.
+
+## Authors 
+
+Gabriel Perez - Initial work - Untitled1Unmastered1 
 
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The MIT License (MIT)
 
-## Code of Conduct
+Copyright (c) 2020 Untitled1Unmastered1
 
-Everyone interacting in the AncientBattleCodex project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/ancient_battle_codex/blob/master/CODE_OF_CONDUCT.md).
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+## Acknowledgments
+
+Thank you to those who continue to record history as accurately as possible, and not try and rewrite it.
