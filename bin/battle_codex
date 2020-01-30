@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby 
+
+
+
+require_relative '../lib/environment.rb'
+
+AncientBattleCodex::CLI.new.call
+
+
+
+
+
+
+#this serves as my executable file 

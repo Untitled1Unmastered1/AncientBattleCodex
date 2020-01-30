@@ -2,7 +2,7 @@
 
 This interactive CLI lists the top 14 most decisive battles in Ancient History, in shakespearean dialogue.  You can choose a battle to learn more information about it. The executable file is: ./bin/battle_codex.rb This loads the environment file, which then loads all other files in order of importance. To get started, run: 
 
-./bin/battle_codex.rb
+./bin/battle_codex
 
 
 
@@ -18,7 +18,7 @@ cd Ancient_Battle_Codex
 
 Then to load the interactive list, go ahead and run the executable file:
 
-./bin/battle_codex.rb
+./bin/battle_codex
 
 Enjoyeth this hist'ry lesson!
 

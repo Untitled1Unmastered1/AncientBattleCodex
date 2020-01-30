@@ -9,7 +9,7 @@ class AncientBattleCodex::CLI
         puts "\n------------------------------------"
         puts "Hist'rians! These art the top 14 most decisive ancient battles in hist'ry!"
         puts "------------------------------------"
-        AncientBattleCodex::Battle.scrape_article 
+        AncientBattleCodex::Scraper.scrape_article 
         INSTANCES.each do |battle|
             puts "#{battle.name} |" "BATTLE BETWEEN:#{battle.parties} |" "LOCATION:#{battle.location}"
         end 
